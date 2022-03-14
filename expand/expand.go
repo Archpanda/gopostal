@@ -67,7 +67,7 @@ var cDefaultOptions = C.libpostal_get_default_options()
 
 func GetDefaultExpansionOptions() ExpandOptions {
     return ExpandOptions{
-        Languages: nil,
+        Languages: [1]string{"FR"},
         AddressComponents: uint16(cDefaultOptions.address_components),
         LatinAscii: bool(cDefaultOptions.latin_ascii),
         Transliterate: bool(cDefaultOptions.transliterate),
